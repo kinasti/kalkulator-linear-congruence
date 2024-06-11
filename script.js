@@ -16,7 +16,7 @@ document.getElementById('congruence-form').addEventListener('submit', function (
     if (gcd(a, m) === 1) {
         const [x, y, gcd] = extendedGcd(a, m);
         const solution = ((x * b % m) + m) % m;
-        resultDiv.innerHTML = `The solution to ${a}x ≡ ${b} (mod ${m}) is x ≡ ${solution} (mod ${m})`;
+        resultDiv.innerHTML = `Solution: ${a}x ≡ ${b} (mod ${m}) is x ≡ ${solution} (mod ${m})`;
     } else {
         resultDiv.innerHTML = 'No solution exists';
     }
