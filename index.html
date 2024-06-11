@@ -9,6 +9,41 @@
 <body>
     <div class="container">
         <h1>Linear Congruence Calculator</h1>
+
+                <div class="description">
+            <p><strong>Linear congruences</strong> adalah persamaan bentuk:</p>
+            <p><code>𝑎𝑥 ≡ 𝑏 (mod 𝑛)</code></p>
+            <p>yang berarti <code>𝑎𝑥</code> dan <code>𝑏</code> memiliki sisa yang sama ketika dibagi dengan <code>𝑛</code>. Dalam notasi ini:</p>
+            <ul>
+                <li><code>𝑎</code>, <code>𝑏</code>, dan <code>𝑛</code> adalah bilangan bulat.</li>
+                <li><code>𝑛</code> disebut modulus.</li>
+                <li><code>𝑥</code> adalah bilangan bulat yang kita cari.</li>
+            </ul>
+
+            <p><strong>Contoh</strong></p>
+            <p>Misalkan kita memiliki persamaan kongruensi linear:</p>
+            <p><code>3𝑥 ≡ 4 (mod 7)</code></p>
+            <p>Ini berarti kita mencari bilangan bulat <code>𝑥</code> sedemikian rupa sehingga <code>3𝑥</code> memiliki sisa yang sama dengan <code>4</code> ketika dibagi dengan <code>7</code>.</p>
+
+            <p><strong>Cara Menyelesaikan Linear Congruences</strong></p>
+            <ol>
+                <li>
+                    <p><strong>Cek Eksistensi Solusi:</strong></p>
+                    <p>Linear congruence <code>𝑎𝑥 ≡ 𝑏 (mod 𝑛)</code> memiliki solusi jika dan hanya jika <code>gcd(𝑎, 𝑛)</code> membagi <code>𝑏</code>. Di sini, <code>gcd</code> adalah faktor persekutuan terbesar dari <code>𝑎</code> dan <code>𝑛</code>.</p>
+                </li>
+                <li>
+                    <p><strong>Menggunakan Algoritma Euclidean:</strong></p>
+                    <p>Jika <code>gcd(𝑎, 𝑛) = 1</code>, kita dapat menggunakan algoritma Euclidean untuk menemukan solusi.</p>
+                    <p>Gunakan algoritma Extended Euclidean untuk menemukan pembalik modular <code>𝑎</code> modulo <code>𝑛</code>, yaitu <code>𝑎^−1</code>, sehingga <code>𝑎⋅𝑎^−1 ≡ 1 (mod n)</code>.</p>
+                </li>
+                <li>
+                    <p><strong>Mengalikan Pembalik Modular:</strong></p>
+                    <p>Setelah mendapatkan <code>𝑎^−1</code>, kalikan kedua sisi persamaan dengan <code>𝑎^−1</code> untuk mendapatkan solusi <code>𝑥</code>:</p>
+                    <p><code>𝑥 ≡ 𝑏⋅𝑎^−1 (mod 𝑛)</code></p>
+                </li>
+            </ol>
+        </div>
+
         <form id="congruence-form">
             <input type="number" id="a" placeholder="Enter a" required>
             <input type="number" id="b" placeholder="Enter b" required>
