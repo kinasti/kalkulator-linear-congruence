@@ -9,14 +9,6 @@
 <body>
     <div class="container">
         <h1>Linear Congruence Calculator</h1>
-        <form id="congruence-form">
-            <input type="number" id="a" placeholder="Masukan bilangan a" required>
-            <input type="number" id="b" placeholder="Masukan bilangan b" required>
-            <input type="number" id="m" placeholder="Masukan bilangan m" required>
-            <button type="submit">Solve</button>
-        </form>
-        <div class="result" id="result"></div>
-
         <div class="description">
             <p>Linear congruences adalah persamaan bentuk:</p>
             <pre>𝑎𝑥 ≡ 𝑏 (mod 𝑛)</pre>
@@ -31,6 +23,13 @@
             <pre>3𝑥 ≡ 4 (mod 7)</pre>
             <p>Ini berarti kita mencari bilangan bulat 𝑥 sedemikian rupa sehingga 3𝑥 memiliki sisa yang sama dengan 4 ketika dibagi dengan 7.</p>
         </div>
+        <form id="congruence-form">
+            <input type="number" id="a" placeholder="Masukan bilangan a" required>
+            <input type="number" id="b" placeholder="Masukan bilangan b" required>
+            <input type="number" id="m" placeholder="Masukan bilangan m" required>
+            <button type="submit">Solve</button>
+        </form>
+        <div class="result" id="result"></div>
     </div>
 
     <script src="script.js"></script>
